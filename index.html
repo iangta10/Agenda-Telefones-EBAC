@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+        <img src="./images/agenda.png" alt="Agenda de contatos">
+        <h1>Agenda de contatos</h1>
+    </header>
+    <form id="form-dados">
+        <label for="nome-contato">Nome: </label>
+        <input id="nome-contato" type="text" required placeholder="Nome do contato"/>
+        <label for="numero-contato">Telefone: </label>
+        <input id="numero-contato" type="tel" required pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="EX. 11 99999-9999"/>
+        <select name="tipo" id="tipo-telefone">
+            <option value="tel">Telefone</option>
+            <option value="wpp">Whatsapp</option>
+            <option value="both">Ambos</option>
+        </select>
+        <button type="submit" class="btn-adicionar"> Adicionar</button>
+    </form>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Nome do Contato
+                </th>
+                <th>
+                    Telefone do Contato
+                </th>
+                <th>
+                    Tipo de Contato
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>nome 1</td>
+                <td>telefone top</td>
+                <td><img id="logo" src="./images/whatsapp.png" alt="Logo do Whatsapp"><img id="logo" src="./images/telefone.png" alt="Logo do Whatsapp"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
